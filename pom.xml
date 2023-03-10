@@ -11,6 +11,8 @@
 
     <modules>
         <module>cycle-tasks</module>
+        <module>inheritance-tasks</module>
+        <module>arrays-tasks</module>
     </modules>
 
     <build>
