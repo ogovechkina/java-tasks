@@ -41,3 +41,4 @@ public class Task2 {
         printRowOfZeros(columns);
     }
 }
+

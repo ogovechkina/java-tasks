@@ -3,6 +3,7 @@ package org.example;
 public class Task1 {
     public static void main(String[] args) {
         printMatrixOfStars(6, 6);
+        printMatrix(6);
     }
 
     /**
@@ -25,5 +26,18 @@ public class Task1 {
             printRowOfStars(columns);
             System.out.println();
         }
+    }
+
+    /**
+     * Альтернативное решение задачи с помощью одного цикла
+     * @param count количество звездочек в строке
+     */
+        public static void printMatrix(int count) {
+            for(int i=0; i<count * count; i++){
+                if (i % count == 0){
+                    System.out.println();
+                }
+                System.out.print("* ");
+            }
     }
 }
