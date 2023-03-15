@@ -2,14 +2,14 @@ package org.example;
 
 public abstract class Animal {
     private final String kind;
-    private final int runDistanceLimit;
-    private final double jumpHeightLimit;
-    private final int swimDistanceLimit;
+    private final Double runDistanceLimit;
+    private final Double jumpHeightLimit;
+    private final Double swimDistanceLimit;
 
     /**
-     * Создает животное которое умеет бегать, прыгать и плавать
+     * Конструктор создает животное которое умеет бегать, прыгать и плавать
      */
-    protected Animal(String kind, int runDistanceLimit, double jumpHeightLimit, int swimDistanceLimit) {
+    protected Animal(String kind, Double runDistanceLimit, Double jumpHeightLimit, Double swimDistanceLimit) {
         this.kind = kind;
         this.runDistanceLimit = runDistanceLimit;
         this.jumpHeightLimit = jumpHeightLimit;
@@ -19,15 +19,17 @@ public abstract class Animal {
     /**
      * Конструктор создает животное, которое умеет бегать и прыгать, но не умеет плавать
      */
-    protected Animal(String kind, int runDistanceLimit, double jumpHeightLimit) {
+    protected Animal(String kind, Double runDistanceLimit, Double jumpHeightLimit) {
         this.kind = kind;
         this.runDistanceLimit = runDistanceLimit;
         this.jumpHeightLimit = jumpHeightLimit;
-        this.swimDistanceLimit = 0;
+        this.swimDistanceLimit = null;
     }
 
-    public void run(int distance) {
-        if (distance > runDistanceLimit) {
+    public void run(double distance) {
+        if (runDistanceLimit == null || runDistanceLimit == 0){
+            System.out.println("Я не умею бегать");
+        } else if (distance > runDistanceLimit) {
             System.out.println(kind + " так быстро бегать не умеет");
         } else {
             System.out.println(kind + " побежал!");
@@ -35,34 +37,39 @@ public abstract class Animal {
     }
 
     public void jump(double height) {
-        if (height > jumpHeightLimit) {
+        if (jumpHeightLimit == null || jumpHeightLimit == 0){
+            System.out.println("Я не умею прыгать");
+        } else if (height > jumpHeightLimit) {
             System.out.println(kind + " так высоко прыгать не умеет");
         } else {
             System.out.println(kind + " прыгнул!");
         }
     }
 
-    public void swim(int distance) {
-        if (distance > swimDistanceLimit) {
+    public void swim(double distance) {
+        if (swimDistanceLimit == null || swimDistanceLimit == 0){
+            System.out.println("Я не умею плавать");
+        }
+        else if (distance > swimDistanceLimit) {
             System.out.println(kind + " так далеко плавать не умеет");
         } else {
             System.out.println(kind + " поплыл!");
         }
     }
 
-    public String getKind() {
+    public String getKind () {
         return kind;
     }
 
-    public int getRunDistanceLimit() {
+    public Double getRunDistanceLimit() {
         return runDistanceLimit;
     }
 
-    public double getJumpHeightLimit() {
+    public Double getJumpHeightLimit() {
         return jumpHeightLimit;
     }
 
-    public int getSwimDistanceLimit() {
+    public Double getSwimDistanceLimit() {
         return swimDistanceLimit;
     }
 }
