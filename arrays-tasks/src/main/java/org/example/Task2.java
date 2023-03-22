@@ -3,7 +3,7 @@ package org.example;
 public class Task2 {
 
     public static void main(String[] args) {
-        int[][] square = new int[5][5];
+        int[][] square = new int[10][10];
         for (int i = 0; i < square.length; i++) {
             square[i][i] = 1;
             square[i][square.length - i - 1] = 1;
