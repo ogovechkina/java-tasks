@@ -7,9 +7,9 @@ public class Task1 {
         int maxNum = num.length;
 
         for (int i = 0; i < maxNum; i++) {
-            if (num[i] < 6) num[i] = num[i] * 2;
+            if (num[i] < 6) num[i] *= 2;
 
-            System.out.print(i + 1 + "-" + num[i] + " ");
+            System.out.println(i + 1 + "-" + num[i]);
         }
     }
 }
