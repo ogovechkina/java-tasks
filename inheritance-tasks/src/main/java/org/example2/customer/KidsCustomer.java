@@ -2,15 +2,12 @@ package org.example2.customer;
 
 import org.example2.card.KidsCard;
 
+import java.util.Arrays;
+
 public class KidsCustomer extends Customer {
 
     public KidsCustomer(String fullName, String contractNum, KidsCard card) {
-        super(fullName, contractNum, card);
-    }
-
-    @Override
-    public KidsCard getCard() {
-        return (KidsCard) super.getCard();
+        super(fullName, contractNum, Arrays.asList(card));
     }
 
     @Override
@@ -18,7 +15,7 @@ public class KidsCustomer extends Customer {
         return "KidsCustomer{" +
                 "fullName='" + super.getFullName() + '\'' +
                 ", contractNum='" + super.getContractNum() + '\'' +
-                ", card=" + super.getCard() +
+                ", cards=" + super.getCards() +
                 '}';
     }
 }

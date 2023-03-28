@@ -1,17 +1,18 @@
 package org.example2.customer;
 
 import org.example2.card.Card;
-import org.example2.service.Service;
+
+import java.util.List;
 
 public class Customer {
     private final String fullName;
     private final String contractNum;
-    private final Card card;
+    private final List<Card> cards;
 
-    public Customer(String fullName, String contractNum, Card card) {
+    public Customer(String fullName, String contractNum, List<Card> cards) {
         this.fullName = fullName;
         this.contractNum = contractNum;
-        this.card = card;
+        this.cards = cards;
     }
 
     public String getContractNum() {
@@ -22,8 +23,8 @@ public class Customer {
         return fullName;
     }
 
-    public Card getCard() {
-        return card;
+    public List<Card> getCards() {
+        return cards;
     }
 
     @Override
@@ -31,7 +32,7 @@ public class Customer {
         return "Customer{" +
                 "fullName='" + fullName + '\'' +
                 ", contractNum='" + contractNum + '\'' +
-                ", card=" + card +
+                ", cards=" + cards +
                 '}';
     }
 }
