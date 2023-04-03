@@ -16,6 +16,7 @@
         <module>collection</module>
         <module>interfaces</module>
         <module>streamApi-lambda</module>
+        <module>regex</module>
     </modules>
 
     <build>
