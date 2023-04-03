@@ -9,4 +9,9 @@ public class CelsiusToFahrenheitConverter implements CelsiusConverter {
     public double convert(double degree) {
         return degree * COEFFICIENT + FREEZING_POINT;
     }
+
+    @Override
+    public double convert(int degree) {
+        return degree * COEFFICIENT + FREEZING_POINT;
+    }
 }

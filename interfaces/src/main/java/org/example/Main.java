@@ -13,6 +13,10 @@ public class Main {
         System.out.println("Результат конфертации Цельсию в Кельвины - " + celsiusToKelvin.convert(30));
         System.out.println("-----------------------");
         System.out.println("Результат конфертации Цельсию в Фаренгейты - " + celsiusToFahrenheit.convert(30));
+        System.out.println("-----------------------");
+        System.out.println("Результат конфертации Цельсию в Кельвины - " + celsiusToKelvin.convert(55.5));
+        System.out.println("-----------------------");
+        System.out.println("Результат конфертации Цельсию в Фаренгейты - " + celsiusToFahrenheit.convert(55.5));
     }
 
 }

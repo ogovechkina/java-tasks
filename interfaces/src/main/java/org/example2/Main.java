@@ -49,7 +49,8 @@ public class Main {
     public static void startCompetition(List<Barrier> barriers, List<Competitor> competitors) {
         for (int i = 0; i < competitors.size(); i++) {
             Competitor competitor = competitors.get(i);
-            System.out.println((i + 1) + "й участник: " + competitor.getName());
+
+            System.out.format("%dй участник: %s\n", i + 1, competitor.getName());
 
             boolean win = true;
             for (Barrier barrier : barriers) {

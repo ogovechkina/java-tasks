@@ -7,4 +7,9 @@ public class CelsiusToKelvinConverter implements CelsiusConverter {
     public double convert(double degree) {
         return degree + COEFFICIENT;
     }
+
+    @Override
+    public double convert(int degree) {
+        return degree + COEFFICIENT;
+    }
 }
