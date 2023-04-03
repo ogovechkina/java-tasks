@@ -15,6 +15,7 @@
         <module>arrays-tasks</module>
         <module>collection</module>
         <module>interfaces</module>
+        <module>streamApi-lambda</module>
     </modules>
 
     <build>
