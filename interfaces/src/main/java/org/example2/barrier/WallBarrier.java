@@ -1,4 +1,7 @@
-package org.example2;
+package org.example2.barrier;
+
+import org.example2.barrier.Barrier;
+import org.example2.barrier.Competitor;
 
 public class WallBarrier implements Barrier {
     private final Double height;

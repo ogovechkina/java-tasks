@@ -1,12 +1,14 @@
-package org.example2;
+package org.example2.competitor;
 
-public class Robot implements Competitor {
-    private static final double RUN_DISTANCE_LIMIT = 5000;
-    private static final double JUMP_HEIGHT_LIMIT = 3.0;
+import org.example2.barrier.Competitor;
+
+public class Human implements Competitor {
+    private static final double RUN_DISTANCE_LIMIT = 2000.4;
+    private static final double JUMP_HEIGHT_LIMIT = 1.5;
 
     private final String name;
 
-    public Robot(String name) {
+    public Human(String name) {
         this.name = name;
     }
 
