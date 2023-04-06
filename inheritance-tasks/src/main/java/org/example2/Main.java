@@ -24,9 +24,9 @@ public class Main {
                 new CreditCard("2200 0000 0000 0003", "IVANOV IVAN")
         ));
 
-
-
         Customer ivanovIvan = new Customer("Ivanov Ivan", "B-19032023", cardsOfIvanovIvan);
+
+        cardsOfIvanovIvan.add(new KidsCard("2200 0000 1111 0001", "IVANOV VASYA", 14, ivanovIvan));
 
         System.out.println(ivanovIvan);
         Card ivanovCard1 = ivanovIvan.getCards().get(0);
